@@ -1,0 +1,19 @@
+[project]
+name = "macaq-mlx"
+version = "0.1.0"
+description = "Native MLX port of MACaQ (arXiv 2611.10649) for Apple Silicon"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "mlx>=0.32.4",
+    "mlx-lm>=0.32",
+    "datasets>=4",
+    "numpy",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false

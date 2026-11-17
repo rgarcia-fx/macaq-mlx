@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+/models
+/data
+/runs
+*.npz
+*.npy
+*.safetensors
+.DS_Store
+.pytest_cache/

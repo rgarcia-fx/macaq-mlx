@@ -1,0 +1,65 @@
+{
+ "checkpoint": "runs/export/Qwen3.8-27B-MACaQ-W4A16-a1.0-K512-c262144-mix-q8tail",
+ "wiki": {
+  "kld": 0.018505297601222992,
+  "p99": 0.1794273406267166,
+  "top1": 0.939697265625
+ },
+ "c4": {
+  "kld": 0.024401994422078133,
+  "p99": 0.3202461302280426,
+  "top1": 0.9400634765625
+ },
+ "ppl_wiki": 7.106628894805908,
+ "ppl_c4": 9.561148643493652,
+ "generations": [
+  {
+   "prompt": "Explain in three sentences why the sky is blue.",
+   "output": "The sky appears blue because sunlight, which is actually white, scatters in the Earth's atmosphere due to a process called Rayleigh scattering. This scattering affects shorter wavelengths of light, such as blue and violet, much more strongly than longer wavelengths like red and orange. Although violet light scatters even more than blue, our eyes are more sensitive to blue, and some of the violet light is absorbed by the upper atmosphere, making the sky appear predominantly blue to us.",
+   "tokens": 94,
+   "decode_tps": 23.98,
+   "prompt_tps": 80.4,
+   "peak_gb": 25.09
+  },
+  {
+   "prompt": "Write a Python function that returns the n-th Fibonacci number iteratively.",
+   "output": "```python\ndef fibonacci(n: int) -> int:\n    \"\"\"\n    Return the n-th Fibonacci number iteratively.\n    \n    The Fibonacci sequence is defined as:\n    F(0) = 0\n    F(1) = 1\n    F(n) = F(n-1) + F(n-2) for n >= 2\n    \n    Args:\n        n: A non-negative integer representing the position in the Fibonacci sequence.\n        \n    Returns:\n        The n-th Fibonacci number.\n        \n    Raises:\n        ValueError: If n is negative.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"n must be a non-negative integer\")\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```",
+   "tokens": 216,
+   "decode_tps": 23.87,
+   "prompt_tps": 144.1,
+   "peak_gb": 25.09
+  },
+  {
+   "prompt": "A train leaves at 3:40 pm and the trip takes 2 hours 35 minutes. When does it arrive? Answer briefly.",
+   "output": "6:15 pm",
+   "tokens": 6,
+   "decode_tps": 28.4,
+   "prompt_tps": 192.0,
+   "peak_gb": 25.09
+  },
+  {
+   "prompt": "Translate to French: 'The meeting has been moved to Thursday morning.'",
+   "output": "La r\u00e9union a \u00e9t\u00e9 d\u00e9plac\u00e9e \u00e0 jeudi matin.",
+   "tokens": 11,
+   "decode_tps": 26.15,
+   "prompt_tps": 123.5,
+   "peak_gb": 25.09
+  },
+  {
+   "prompt": "List the planets of the solar system in order from the Sun.",
+   "output": "Here are the planets of the solar system listed in order from the Sun:\n\n1. **Mercury**\n2. **Venus**\n3. **Earth**\n4. **Mars**\n5. **Jupiter**\n6. **Saturn**\n7. **Uranus**\n8. **Neptune**\n\n**Note:** Pluto is classified as a **dwarf planet** and is not included in the list of the eight major planets.",
+   "tokens": 99,
+   "decode_tps": 24.16,
+   "prompt_tps": 122.8,
+   "peak_gb": 25.09
+  },
+  {
+   "prompt": "What is 17 * 23? Show your work briefly.",
+   "output": "To calculate $17 \\times 23$, we can use the standard multiplication algorithm or break it down using the distributive property.\n\n**Method: Distributive Property**\n\nBreak down 23 into $20 + 3$:\n\n$$17 \\times 23 = 17 \\times (20 + 3)$$\n\nDistribute the 17:\n\n$$= (17 \\times 20) + (17 \\times 3)$$\n\nCalculate each part:\n1. $17 \\times 20 = 340$\n2. $17 \\times 3 = 51$\n\nAdd the results:\n\n$$340 + 51 = 391$$\n\n**Answer:**\n$$17 \\times 23 = 391$$",
+   "tokens": 180,
+   "decode_tps": 23.97,
+   "prompt_tps": 138.6,
+   "peak_gb": 25.09
+  }
+ ]
+}
